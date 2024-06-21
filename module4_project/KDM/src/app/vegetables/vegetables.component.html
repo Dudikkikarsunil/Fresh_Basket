@@ -1,0 +1,66 @@
+<!-- <p>vegetables works!</p>
+<p>product works!</p>
+
+<div class="row" >
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"  *ngFor="let prod of vegetables">
+      <div class="card">
+        
+        <div class="card">
+            <!-- <img src="https://freshclub.co.in/cdn/shop/files/271824_2-haldirams-soan-papdi_d41b9fcf-e0c3-4bc1-84ec-80da69f5fc67.webp?v=1693809887&width=360" class="card-img-top" alt="Product Image"> -->
+            <!-- <div class="card-body">
+              <img src="{{ prod.vegImgSrc }}" class="card-img-top" alt="Product Image">
+   -->
+  
+              <!-- <h5 class="card-title">{{prod.vegId}}</h5>
+              <p class="card-title">{{prod.vegName}}</p>
+              <p class="card-text">{{prod.vegText}}</p>
+              <p class="card-text"><strong>Price: {{prod.vegPrice}}</strong></p>
+              <button (click)="addToCart(prod)" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div> 
+      </div>
+    </div>
+    <div *ngFor="let vegetable of vegetables">
+      <h3>{{ vegetable.name }}</h3>
+      <p>Price: {{ vegetable.price }}</p>
+      <button (click)="addToCart(vegetable)">Add to Cart</button>
+    </div> -->
+
+
+    <!-- <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let prod of vegetables">
+          <div class="card">
+              <div class="card-body">
+                  <img src="{{ prod.vegImgSrc }}" class="card-img-top" alt="Product Image">
+                  <h5 class="card-title">{{ prod.vegId }}</h5>
+                  <p class="card-title">{{ prod.vegName }}</p>
+                  <p class="card-text">{{ prod.vegText }}</p>
+                  <p class="card-text"><strong>Price: {{ prod.vegPrice }}</strong></p>
+                  <button (click)="addToCart(prod)" class="btn btn-primary">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  </div> -->
+  <div class="row" >
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"  *ngFor="let prod of vegetables">
+      <div class="card">
+        
+        <div class="card">
+            <!-- <img src="https://freshclub.co.in/cdn/shop/files/271824_2-haldirams-soan-papdi_d41b9fcf-e0c3-4bc1-84ec-80da69f5fc67.webp?v=1693809887&width=360" class="card-img-top" alt="Product Image"> -->
+            <div class="card-body">
+              <div></div>
+              <img src="{{ prod.vegImgSrc }}" class="card-img-top" alt="Product Image" style="height: 270px;width: 280px; margin-top: 20px;">
+  
+  
+              <h5 class="card-title">{{prod.vegId}}</h5>
+              <p class="card-title">{{prod.vegName}}</p>
+              <p class="card-text">{{prod.vegText}}</p>
+              <p class="card-text"><strong>Price: {{prod.vegPrice}}</strong></p>
+              <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+              <button (click)="addToCart(prod)" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div> 
+      </div>
+    </div>
+  
+

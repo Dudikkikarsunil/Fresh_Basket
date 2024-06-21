@@ -1,0 +1,45 @@
+
+
+<!-- <div class="row" >
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"  *ngFor="let frt of fruits">
+      <div class="card">
+        
+        <div class="card"> -->
+            <!-- <img src="https://freshclub.co.in/cdn/shop/files/271824_2-haldirams-soan-papdi_d41b9fcf-e0c3-4bc1-84ec-80da69f5fc67.webp?v=1693809887&width=360" class="card-img-top" alt="Product Image"> -->
+            <!-- <div class="card-body">
+              <img src="{{ frt.imgSrc }}" class="card-img-top" alt="Product Image">
+  
+  
+              <h5 class="card-title">{{frt.id}}</h5>
+              <p class="card-title">{{frt.prodName}}</p>
+              <p class="card-text">{{frt.prodText}}</p>
+              <p class="card-text"><strong>Price: {{frt.price}}</strong></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div> 
+      </div>
+    </div> -->
+    <div class="row" >
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3"  *ngFor="let prod of fruits">
+        <div class="card">
+          
+          <div class="card">
+              <!-- <img src="https://freshclub.co.in/cdn/shop/files/271824_2-haldirams-soan-papdi_d41b9fcf-e0c3-4bc1-84ec-80da69f5fc67.webp?v=1693809887&width=360" class="card-img-top" alt="Product Image"> -->
+              <div class="card-body">
+                <img src="{{ prod.frtImgSrc }}" class="card-img-top" alt="Product Image">
+    
+    
+                <h5 class="card-title">{{prod.frtId}}</h5>
+                <p class="card-title">{{prod.frtName}}</p>
+                <p class="card-text">{{prod.frtText}}</p>
+                <p class="card-text"><strong>Price: {{prod.frtPrice}}</strong></p>
+                <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                <button (click)="addToCart(prod)" class="btn btn-primary">Add to Cart</button>
+              </div>
+            </div> 
+        </div>
+      </div>
+    
+  
+  
+

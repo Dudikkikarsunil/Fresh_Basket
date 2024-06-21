@@ -1,0 +1,132 @@
+
+<h3>welcome to admin page.</h3>
+
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <h4 style="margin-bottom: 50px;"></h4> -->
+<!-- <table *ngIf="customers">
+    <tr>
+        <td>Customer Id</td>
+        <td> Customer Name</td>
+        <td> Phone Number</td>
+        <td>Gender</td>
+        <td> Email</td>
+        <td>Password</td>
+        <td>country</td>
+        <td>city</td>
+       <td>Edit</td>
+        <td>Delete</td>
+
+    </tr>
+    <tr *ngFor="let cust of customers">
+        <td>{{cust.customerId}}</td>
+        <td>{{cust.customerName}}</td>
+        <td>{{cust.phoneNumber}}</td>
+        <td>{{cust.gender}}</td>
+        <td>{{cust.email}}</td>
+        <td>{{cust.password}}</td>
+        <td>{{cust.country}}</td>
+        <td>{{cust.city}}</td>
+        <td><button (click)="deleteEmp(cust.customerId)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+          </svg></button></td>
+        
+
+    </tr>
+</table> -->
+<div class="container" *ngIf="selectedCustomer">
+
+    <!-- Modal -->
+    <div class="modal fade" id="editEmployee" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+  
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Edit Customer</h4>
+          </div>
+  
+          <div class="modal-body">
+            <!-- Form to edit customer details -->
+            <form #editForm="ngForm" (ngSubmit)="updateCustomer()" novalidate>
+              <input type="hidden" name="customerId" [(ngModel)]="selectedCustomer.customerId">
+  
+              <label for="customerName">Customer Name:</label>
+              <input type="text" id="customerName" name="customerName" [(ngModel)]="selectedCustomer.customerName" required>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="emailId" name="emailId" [(ngModel)]="selectedCustomer.emailId" required>
+          
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" [(ngModel)]="selectedCustomer.password" required>
+          
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender" [(ngModel)]="selectedCustomer.gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+          
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="selectedCustomer.phoneNumber" required>
+          
+              <!-- <label for="country">Country:</label>
+              <select [(ngModel)]="selectedCustomer.country" name="country" id="country" required>
+                <option *ngFor="let country of countries" [value]="country.cca3">{{country.name.common}}</option>
+              </select>
+           -->
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" [(ngModel)]="selectedCustomer.city" required>
+          
+              <button type="submit">Update Customer</button>
+            </form>
+          </div>
+  
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="centertable">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>customerId</th>
+          <th>customerName</th>
+          <th>gender</th>
+          <th>country</th>
+          <th>phoneNumber</th>
+          <th>emailId</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>   
+      </thead>
+      <tbody>
+        <tr *ngFor="let allcust of customers">
+          <td>{{ allcust.customerId }}</td>
+          <td>{{ allcust.customerName }}</td>
+          <td>{{ allcust.gender }}</td>
+          <td>{{ allcust.country }}</td>
+          <td>{{ allcust.phoneNumber }}</td>
+          <td>{{ allcust.email }}</td>
+          <td><button (click)="deleteEmp(allcust.customerId)">Delete</button></td>
+          <td><button (click)="selectCustomer(allcust)" data-toggle="modal" data-target="#editEmployee">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  
+  
+  

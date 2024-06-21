@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .card {
+    border: 1px solid #ced4da;
+  }
+  
+  .card-header {
+    background-color: #929394;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group-addon {
+    background-color: #66686b;
+    color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #6d737a;
+    border-color: #8a8c8e;
+  }
+  
+  .btn-primary:hover {
+    background-color: #65676a;
+    border-color: #3d3d44;
+  }
+  

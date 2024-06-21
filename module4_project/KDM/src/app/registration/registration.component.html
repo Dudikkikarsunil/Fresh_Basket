@@ -1,0 +1,291 @@
+<!-- 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/app/registration/registration.component.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  </head>
+  <body> -->
+    <!-- <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3><span class="glyphicon glyphicon-user"></span> Registration</h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" placeholder="User ID">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Username">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select class="form-control">
+                      <option selected disabled>Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                    <input type="text" class="form-control" placeholder="Country">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="glyphicon glyphicon-user"></span> Registration</h3>
+           </div> -->
+          <!-- <div class="card-body">
+            <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+              <div class="form-group"> --> -->
+                <!-- <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="User ID" name="CustomerId" [(ngModel)]="userData.userId" required>
+                </div> -->
+              <!-- </div> -->
+              <!-- <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="userData.email" required minlength="8" maxlength="20">
+                </div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['required'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter valid email         </p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['minlength'] && registrationForm.controls['email'].touched"><p style="color: red;">Please enter at least 8 characters for email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['maxlength'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter at most 20 characters for email</p></div>
+              
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="userData.password" required minlength="8" maxlength="10">
+                </div>
+                <div *ngIf="registrationForm.controls['password'].errors?.['required'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter valid password</p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['minlength'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter at least 8 characters for password</p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['maxlength'] && registrationForm.controls['password'].touched"><p style="color:red;">Please enter at most 10 characters for password</p></div>
+                </div>
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="userData.confirmPassword" required minlength="8" maxlength="10">
+                </div>
+                <div *ngIf="registrationForm.controls['password'].errors?.['required'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter valid password same as above </p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['minlength'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter at least 8 characters for password</p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['maxlength'] && registrationForm.controls['password'].touched"><p style="color:red;">Please enter at most 10 characters for password</p></div>
+                
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Username" name="customerName" [(ngModel)]="userData.customerName" required >
+                
+                </div>
+                <div *ngIf="registrationForm.controls['text'].errors?.['required'] && registrationForm.controls['text'].touched"><p style="color: red;">Please enter surname and name </p></div>
+              </div>
+              <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+      <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="userData.phoneNumber" required>
+    </div>
+    <div *ngIf="registrationForm.controls['text'].errors?.['required'] && registrationForm.controls['text'].touched"><p style="color: red;">Please enter Mobile Number </p></div>
+  </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                  <select class="form-control" name="gender" [(ngModel)]="userData.gender" required>
+                    <option selected disabled>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+        
+                </div>
+                <div *ngIf="registrationForm.controls['option'].errors?.['required'] && registrationForm.controls['option'].touched"><p style="color: red;">Please select Gender </p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="userData.city" required>
+                </div>
+                <div *ngIf="registrationForm.controls['text'].errors?.['required'] && registrationForm.controls['text'].touched"><p style="color: red;">Please enter your city name </p></div>
+              </div>
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="Country" name="country" [(ngModel)]="userData.country" required>
+                  
+                </div>
+                <div *ngIf="registrationForm.controls['country'].errors?.['required'] && registrationForm.controls['country'].touched"><p style="color: red;">Please enter your country name</p></div>
+                <ngx-recaptcha2 [siteKey]="sitekey"></ngx-recaptcha2>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- </body>
+  </html> -->
+
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="/app/registration/registration.component.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="glyphicon glyphicon-user"></span> Registration</h3>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="userData.email" required minlength="8" maxlength="20" email="email">
+                </div>
+                <!-- <div *ngIf="registrationForm.controls['email'].errors?.['required'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter a valid email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['minlength'] && registrationForm.controls['email'].touched"><p style="color: red;">Please enter at least 8 characters for email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['maxlength'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter at most 20 characters for email</p></div> -->
+
+                <div *ngIf="registrationForm.controls['email'].errors?.['required'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter a valid email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['minlength'] && registrationForm.controls['email'].touched"><p style="color: red;">Please enter at least 8 characters for email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['maxlength'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter at most 20 characters for email</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['email'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter a valid email address</p></div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="userData.password" required  maxlength="10" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                </div>
+                <div *ngIf="registrationForm.controls['password'].errors?.['required'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter a valid password</p></div>
+                <!-- <div *ngIf="registrationForm.controls['password'].errors?.['minlength'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter at least 8 characters for password</p></div> -->
+                <div *ngIf="registrationForm.controls['password'].errors?.['pattern'] && registrationForm.controls['password'].touched"><p style="color: red;">Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long</p></div>
+                <div *ngIf="registrationForm.controls['password'].errors?.['maxlength'] && registrationForm.controls['password'].touched"><p style="color:red;">Please enter at most 10 characters for password</p></div>
+                <div *ngIf="registrationForm.controls['email'].errors?.['email'] && registrationForm.controls['email'].touched"><p style="color:red;">Please enter a valid email address</p></div>
+              </div>
+             
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="userData.confirmPassword" required minlength="8" maxlength="10">
+                </div>
+                <div *ngIf="registrationForm.controls['password'].errors?.['required'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter valid password same as above </p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['minlength'] && registrationForm.controls['password'].touched"><p style="color: red;">Please enter at least 8 characters for password</p></div>
+                  <div *ngIf="registrationForm.controls['password'].errors?.['maxlength'] && registrationForm.controls['password'].touched"><p style="color:red;">Please enter at most 10 characters for password</p></div>
+                
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Username" name="customerName" [(ngModel)]="userData.customerName" required>
+                </div>
+                <div *ngIf="registrationForm.controls['customerName'].errors?.['required'] && registrationForm.controls['customerName'].touched"><p style="color: red;">Please enter your username</p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input type="text" class="form-control" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="userData.phoneNumber" required>
+                </div>
+                <div *ngIf="registrationForm.controls['phoneNumber'].errors?.['required'] && registrationForm.controls['phoneNumber'].touched"><p style="color: red;">Please enter your phone number</p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                  <select class="form-control" name="gender" [(ngModel)]="userData.gender" required>
+                    <option selected disabled>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div *ngIf="registrationForm.controls['gender'].errors?.['required'] && registrationForm.controls['gender'].touched"><p style="color: red;">Please select your gender</p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="userData.city" required>
+                </div>
+                <div *ngIf="registrationForm.controls['city'].errors?.['required'] && registrationForm.controls['city'].touched"><p style="color: red;">Please enter your city</p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="Country" name="country" [(ngModel)]="userData.country" required>
+                </div>
+                <div *ngIf="registrationForm.controls['country'].errors?.['required'] && registrationForm.controls['country'].touched"><p style="color: red;">Please enter your country</p></div>
+              </div>
+              <ngx-recaptcha2 [siteKey]="sitekey"></ngx-recaptcha2>
+              <button type="submit" class="btn btn-primary btn-block"  >Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/app/login/login.component.css">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <div class="container" >
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="glyphicon glyphicon-lock"></span> Login</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Username">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> -->.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Include Bootstrap CSS -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- <style>
+    body {
+      background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="glyphicon glyphicon-lock"></span> Login</h3>
+          </div>
+          <div class="card-body">
+            <form #LoginForm="ngForm" (ngSubmit)="loginValidate(LoginForm.value)">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input id="email" type="text" class="form-control" placeholder="Username" name="email" [(ngModel)]="email" required minlength="8" maxlength="20">
+                </div>
+                <div *ngIf="LoginForm.controls['email'].errors?.['required'] && LoginForm.controls['email'].touched"><p style="color:red;">Please enter valid email</p></div>
+                <div *ngIf="LoginForm.controls['email'].errors?.['minlength'] && LoginForm.controls['email'].touched"><p style="color: red;">Please enter at least 8 characters for email</p></div>
+                <div *ngIf="LoginForm.controls['email'].errors?.['maxlength'] && LoginForm.controls['email'].touched"><p style="color:red;">Please enter at most 20 characters for email</p></div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input id="password" type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password" required minlength="8" maxlength="10">
+                </div>
+                <div *ngIf="LoginForm.controls['password'].errors?.['required'] && LoginForm.controls['password'].touched"><p style="color: red;">Please enter valid password</p></div>
+                <div *ngIf="LoginForm.controls['password'].errors?.['minlength'] && LoginForm.controls['password'].touched"><p style="color: red;">Please enter at least 8 characters for password</p></div>
+                <div *ngIf="LoginForm.controls['password'].errors?.['maxlength'] && LoginForm.controls['password'].touched"><p style="color:red;">Please enter at most 10 characters for password</p></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

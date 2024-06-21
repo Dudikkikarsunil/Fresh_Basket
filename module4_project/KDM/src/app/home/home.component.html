@@ -1,0 +1,485 @@
+ <!-- Indicators/dots -->
+ <div class="carousel-indicators">
+  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+</div>
+
+<!-- The slideshow/carousel -->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="assets/images/img2.jpg
+    " alt="home" class="d-block" style="width:100% "  >
+  </div>
+  <!-- <div class="carousel-item">
+    <img src="assets/images/img2.jpg" alt="home1" class="d-block" style="width:100%">
+  </div> -->
+  <div class="carousel-item">
+    <img src="assets/images/img3.jpg" alt="home3" class="d-block" style="width:100%">
+
+  </div>
+</div>
+
+<!-- Left and right controls/icons -->
+<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</button>
+<!-- </div> -->
+
+<!-- <div class="container-fluid mt-3">
+<h3>Carousel Example</h3>
+<p>The following example shows how to create a basic carousel with indicators and controls.</p>
+</div> -->
+<div>
+<br>
+<br>
+</div>
+<h1 style="text-align:center">Explore New Categories </h1>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+.carousel-inner1 {
+    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 30px;
+}
+.carousel-item1 {
+  text-align: center;
+}
+.carousel-item1 img {
+  border-radius:95%; /* Make the images circular */
+  max-width: 95%;
+  height:auto;
+}
+.carousel-item1 img:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.50);
+}
+</style>
+</head>
+<body>
+
+<div >
+
+<div class="carousel-inner1" >
+<div class="carousel-item1 active" >
+  <img src="assets/images/m18.jpg" class="d-block" alt="Product 1">
+</div>
+<div class="carousel-item1">
+  <img src="assets/images/m13.jpg" class="d-block" alt="Product 2">
+</div>
+<div class="carousel-item1">
+  <img src="assets/images/m17.jpg" class="d-block" alt="Product 3">
+</div>
+<div class="carousel-item1">
+  <img src="assets/images/m16.jpg" class="d-block" alt="Product 4">
+</div>
+<div class="carousel-item1">
+  <img src="assets/images/m19.jpg" class="d-block" alt="Product 5">
+</div>    
+</div>
+</div>
+</body>
+</html>
+
+
+<h1 style="text-align:center">Products </h1>
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+        <img src="assets/images/m6.jpg" routerLink="products" alt="FRUITS" style="width:100%">
+<h2>FRUITS</h2>
+<p class="price">RS:200</p>
+<p>SWEET AND SWEATY FRUITS.</p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="assets/images/m5.jpg" routerLink="products" alt="PEANUTS" style="width:100%">
+<h2>PEANUTS</h2>
+<p class="price">RS:100</p>
+<p>DELICIOUS AND TASTY NUTS.</p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="assets/images/m8.jpg" routerLink="products" alt="MILK" style="width:100%">
+<h2>MILK ITEMS</h2>
+<p class="price">RS:50</p>
+<p> CREAM AND TONED MILK.</p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="assets/images/m1.jpg" routerLink="products" alt="MENS PRODUCTS" style="width:100%">
+<h2>MENS Beauty</h2>
+<p class="price">RS:400</p>
+<!-- <p>BEST BEAUTY PRODUCTS.</p> -->
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+</div>
+</div>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+float: left;
+width: 25%;
+padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.column {
+width: 100%;
+display: block;
+margin-bottom: 20px;
+}
+}
+
+/* Style the counter cards */
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<!-- <h2>Responsive Column Cards</h2>
+<p>Resize the browser window to see the effect.</p> -->
+<h1 style="text-align:center">HOME FOODS PRODUCTS</h1>
+<div class="row">
+<div class="column">
+<div class="card">
+  <!-- <h3>Card 1</h3> -->
+  <img src="assets/images/m20.jpg">
+  <!-- <p>Some text</p> -->
+  <!-- <p>Some text</p> -->
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <!-- <h3>Card 2</h3> -->
+ <img src=" assets/images/m23.jpg">
+  <!-- <p>Some text</p> -->
+  <!-- <p>Some text</p> -->
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <!-- <h3>Card 3</h3> -->
+  <img src=" assets/images/m25.jpeg">
+  <!-- <p>Some text</p> -->
+  <!-- <p>Some text</p> -->
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <!-- <h3>Card 4</h3> -->
+  <img src=" assets/images/m27.jpg">
+  <!-- <p>Some text</p> -->
+  <!-- <p>Some text</p> -->
+</div>
+</div>
+</div>
+</body>
+</html>
+<div>
+<br>
+<br>
+</div>
+<h1 style="text-align:center">Other products</h1>
+<div class="row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+.card1 {
+  width: 200px; /* Set the desired width for your card */
+}
+
+.card1 img {
+  border-radius: 5px; /* Optional: Add a slight border-radius for rounded corners */
+  width: 100%;
+  height: 200px; /* Set the desired height for your square image */
+  object-fit: cover; /* Ensure the image covers the entire square space */
+}
+.card1 img:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.25);
+}
+</style>
+<title>Square Card Images</title>
+</head>
+<body>
+
+<div class="container1">
+<div class="row">
+<div class="col-md-3">
+  <div class="card1">
+    <img src="assets/images/m10.jpg" class="card1-img-top" alt="Product 1">
+    <div class="card1-body">
+      <!-- <h1></h1> -->
+      <h5 class="card1-title" >Bananas</h5>
+      <p class="card1-text">Description</p>
+      <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+    <div class="card1">
+      <img src="assets/images/m11.jpg" routerLink="products"class="card1-img-top" alt="Product 1">
+      <div class="card1-body">
+        <h5 class="card1-title">EGGS</h5>
+        <p class="card1-text">Description </p>
+        <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+      </div>
+    </div>
+  </div>
+<div class="col-md-3">
+    <div class="card1">
+      <img src="assets/images/m12.jpg" routerLink="products" class="card1-img-top" alt="Product 1">
+      <div class="card1-body">
+        <h5 class="card1-title">HONEY</h5>
+        <p class="card1-text">Description</p>
+        <!-- <a href="#" class="btn btn-primary">Add to Cart</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card1">
+      <img src="assets/images/m13.jpg" routerLink="products" class="card1-img-top" alt="Product 1">
+      <div class="card1-body">
+        <h5 class="card1-title">DOMEX</h5>
+        <p class="card1-text">Description </p>
+        <!--<a href="#" class="btn btn-primary">Add to Cart</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+</body>
+</html>
+<h1 style="text-align:center">FRUITS </h1>
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+        <img src="https://freshclub.co.in/cdn/shop/products/ApplesRoyalGala4pcs.jpg?v=1660188903&width=360" routerLink="products" alt="FRUITS" style="width:100%">
+<h2>apple</h2>
+<p class="price">$19.99</p>
+<p>Some text </p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="https://freshclub.co.in/cdn/shop/products/Pineapple1pc.jpg?v=1660188893&width=360" routerLink="products" alt="PEANUTS" style="width:100%">
+<h2>pineapple</h2>
+<p class="price">$19.99</p>
+<p>Some text </p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="https://freshclub.co.in/cdn/shop/products/Bananas1kg.jpg?v=1660188813&width=360"routerLink="products" alt="Bananas" style="width:100%">
+<h2>Bananas</h2>
+<p class="price">$19.99</p>
+<p>Some text</p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+<div class="col-md-3">
+<div class="card">
+<img src="https://freshclub.co.in/cdn/shop/products/OrangesImported1kg.jpg?v=1660188891&width=360" routerLink="products" alt="orange" style="width:100%">
+<h2>ORANGE</h2>
+<p class="price">$19.99</p>
+<p>Some text </p>
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+</div>
+</div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Club - Online Fresh Vegetable Store</title>
+<style>
+body1 {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  /* margin-left: 20px;
+  margin-right: 30px; */
+}
+
+h1 {
+  color: #3498db;
+  margin-left: 30px;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 15px;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Fresh Groceries and veggies</h1>
+<p><strong>Online fresh Groceries store</strong> - buy fresh vegetables online in Hyderabad & green vegetables online at the best prices. Order online and get free delivery with Princeclub.</p>
+
+<h2 style="margin-left: 20px;">Prince Club: Your Gateway to Fresh Vegetables in Hyderabad</h2>
+
+<p>Welcome to Prince Club, your one-stop destination for buying the freshest vegetables online in Hyderabad. We understand the importance of incorporating farm-fresh produce into your daily meals, and we're here to make it convenient for you.</p>
+
+<p>With just a few clicks, you can explore a wide variety of handpicked vegetables sourced directly from local farms. Our commitment to quality ensures that you receive the finest produce, bursting with flavor and essential nutrients.</p>
+
+<p>At Fresh Club, we prioritize your convenience without compromising on the freshness of our products. Our user-friendly website allows you to browse through an extensive selection of vegetables, making it easy to find exactly what you need. Whether it's vibrant greens, crunchy bell peppers, or succulent tomatoes, we have it all.</p>
+
+<h3 style="margin-left: 20px;">Your Source for Fresh Vegetables Online in Hyderabad</h3>
+
+<p>Looking for a hassle-free way to buy fresh vegetables online in Hyderabad? Look no further than Fresh Club, your one-stop destination for premium quality, farm-fresh vegetables delivered right to your doorstep. Say goodbye to the inconvenience of crowded markets and the uncertainty of vegetable quality. With Fresh Club, you can enjoy the convenience of online shopping while ensuring that your family gets the best nutrition possible.</p>
+
+<p>Say goodbye to the hassle of crowded markets and long queues. With our reliable delivery service, you can now have farm-fresh vegetables delivered straight to your doorstep. We take pride in our prompt and efficient delivery system, ensuring that you receive your order in pristine condition, ready to elevate your culinary experience.</p>
+
+<p>By choosing Fresh Club, you're not only investing in your health but also supporting local farmers and sustainable agricultural practices. Join us in our mission to promote a healthier lifestyle and a thriving agricultural community.</p>
+
+<p>Experience the convenience of buying fresh vegetables online in Hyderabad with Fresh Club. Elevate your meals, support local farmers, and savor the true essence of freshness. Order now and taste the difference!</p>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="footer">
+<p>We offer an extensive selection of high-quality groceries and essential food items to make your shopping experience convenient, efficient, and stress-free.</p>
+
+<div class="help-links">
+<a href="#">Help</a>
+<a href="#">T&C</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Refunds & Returns Policy</a>
+<a href="#">FAQs</a>
+</div>
+
+<div class="information-links">
+<a href="#">My Account</a>
+<a href="#">Search</a>
+<a href="#">Contact Us</a>
+<a href="#">Terms of Service</a>
+<a href="#">Refund policy</a>
+</div>
+
+<div class="newsletter">
+<p>Subscribe for updates on new arrivals, future events</p>
+<input type="email" placeholder="Email">
+<button>Subscribe</button>
+</div>
+
+<div class="social-icons">
+<a href="#" target="_blank">Email</a>
+<a href="#" target="_blank">Facebook</a>
+<a href="#" target="_blank">Instagram</a>
+<a href="#" target="_blank">YouTube</a>
+<a href="#" target="_blank">Twitter</a>
+</div>
+</div>
+
+
+</body>
+</html> -->
